@@ -1,0 +1,70 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-image: url(https://p0.piqsels.com/preview/658/973/231/under-water-ocean-sea-blue.jpg);
+  background-size: 1920px auto;
+  background-position: center;
+}
+.navbar-brand {
+  font-size: 30px;
+  padding: 0;
+}
+.login-part {
+  width: 30%;
+  margin-top: 150px;
+  padding: 50px;
+  background-color: rgba(255,255,255,0.6);;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5)
+}
+h2{
+  font-weight: 700;
+}
+h2, input {
+  margin-bottom: 30px;
+}
+input {
+  padding: 3px;
+  border-radius: 1px;
+}
+.btn {
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+  background-color: #284f95;
+  color: white;
+}
+.btn:hover {
+  background-color: #122c4b;
+  color: white;
+}
+.error {
+  position: relative; 
+}
+.error>p {
+  position: absolute;
+  margin: 0;
+  width: 300px;
+  left: -150px;
+  top: -10px;
+  color: red;
+  font-size: 16px;
+  text-align: center;
+}
+.hello>h1 {
+  margin-top: 200px;
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 3px;
+}
+.log-out {
+  color: rgba(255,255,255,0.5);
+  margin-top: 20px;
+  background-color: rgba(0,0,0,0.1);
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,0.5);;
+  border-radius: 50px;
+}
+.log-out:hover {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+}

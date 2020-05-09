@@ -1,0 +1,12 @@
+<!-- login -->
+<div class="login-part d-flex flex-column align-items-center mx-auto">
+  <h2>Account Login</h2>
+  <form action="/" method="post" class=" d-flex flex-column align-items-center">
+    <input type="text" placeholder="Email" name="email" id="email" value="{{email}}">
+    <input type="password" placeholder="Password" name="password" id="password">
+    <div class="error">
+      <p>{{results}}</p>
+    </div>
+    <button class="btn btn-secondary mt-4">Sign in</button>
+  </form>
+</div>
