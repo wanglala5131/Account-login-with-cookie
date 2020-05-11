@@ -34,24 +34,22 @@ app.post('/', (req, res) => {
     res.cookie('welcome', results, { path: '/', httpOnly: true, signed: true })
     res.redirect('success')
   }
+})
 
-  app.get('/success', (req, res) => {
-    //若沒有cookie，不能進入此頁面，會跳回身分驗證頁面
-    if (!req.signedCookies.welcome) {
-      res.redirect('/')
+app.get('/success', (req, res) => {
+  //若沒有cookie，不能進入此頁面，會跳回身分驗證頁面
+  if (!req.signedCookies.welcome) {
+    res.redirect('/')
 
-      //若有cookie，會取cookie的value作為使用者名稱  
-    } else {
-      res.render('success', { results: req.signedCookies.welcome })
-    }
-  })
+    //若有cookie，會取cookie的value作為使用者名稱  
+  } else {
+    res.render('success', { results: req.signedCookies.welcome })
+  }
+})
 
-
-  app.get('/logout', (req, res) => {
-    res.clearCookie('welcome', { path: '/' })
-    return res.redirect('/')
-  })
-
+app.get('/logout', (req, res) => {
+  res.clearCookie('welcome', { path: '/' })
+  return res.redirect('/')
 })
 
 app.listen(port, () => {
